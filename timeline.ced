@@ -1,0 +1,3 @@
+'/bootstrap':signature(timeline(B,A,T)::'/bootstrap':pred,[B::user,A::user,T::'/bootstrap':string]).
+'/util':behavior(timeline(B,A,T)::'/bootstrap':pred,!'should succeed for tweet T by A who B follows', (timeline(bob,A,T),'/util':assertEqual(A,alice,user),'/util':assertEqual(T,!'Hello, simpleTweet!','/bootstrap':string))).
+follows(B,A)~>tweet(A,T)~>timeline(B,A,T):-builtin:true.

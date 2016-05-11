@@ -1,0 +1,9 @@
+'/bootstrap':defAtom(user::'/bootstrap':type).
+'/bootstrap':defAtom(alice::user).
+'/bootstrap':signature(tweet(User,Tweet)::'/bootstrap':statement,[User::user,Tweet::'/bootstrap':string]).
+'/bootstrap':projection(tweet(User,Tweet)::'/bootstrap':statement,'/bootstrap':horiz(['/bootstrap':vis(User::user),'/bootstrap':label(!tweeted),'/bootstrap':vis(Tweet::'/bootstrap':string)])).
+tweet(alice,!'Hello, simpleTweet!').
+'/bootstrap':defAtom(bob::user).
+'/bootstrap':signature(follows(B,A)::'/bootstrap':statement,[B::user,A::user]).
+'/bootstrap':projection(follows(B,A)::'/bootstrap':statement,'/bootstrap':horiz(['/bootstrap':vis(B::user),'/bootstrap':label(!follows),'/bootstrap':vis(A::user)])).
+follows(bob,alice).
